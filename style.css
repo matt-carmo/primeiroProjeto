@@ -1,0 +1,18 @@
+h1 {
+    color: blue;
+    border: 1px;
+}
+
+p {
+    font-size: 20px;
+    color: blueviolet;
+}
+
+body {
+    background-color: #93c1f3;
+}
+
+li {
+    font-size: large bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
