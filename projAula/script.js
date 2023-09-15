@@ -1,3 +1,7 @@
-const titulo = document.querySelector("h1");
-titulo.innerText = titulo.innerText + " Mundo";
-console.log(titulo.innerText);
+const botao = document.querySelector("button");
+
+botao.addEventListener("click", alerta);
+
+function alerta() {
+  alert("Olá");
+}
