@@ -1,7 +1,13 @@
-const botao = document.querySelector("button");
+let log = new Log(document.querySelector(".log"));
+let char = new knight("Gustavo");
+let monster = new LittleMonster();
 
-botao.addEventListener("click", alerta);
+const stage = new Stage(
+  char,
+  monster,
+  document.querySelector("#char"),
+  document.querySelector("#monster"),
+  log
+);
 
-function alerta() {
-  alert("Olá");
-}
+stage.start();
