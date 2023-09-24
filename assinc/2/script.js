@@ -6,14 +6,18 @@ function buscaCep() {
 
   apiAcess.then((reponse) => {
     let retorna = reponse.json();
-    retorna.then((data) => {
-      returnDiv.innerHTML = `
+    retorna
+      .then((data) => {
+        returnDiv.innerHTML = `
       <b>CEP:</b> ${data.cep} <p>
       <b>Cidade:</b> ${data.localidade} - ${data.uf} <p> 
       <b>Bairro:</b> ${data.bairro} <p>
       <b>Rua:</b> ${data.logradouro} <p>
       <b>DDD:</b> ${data.ddd} <p>
       <b>IBGE:</b> ${data.ibge} <p>`;
-    });
+      })
+      .catch((error) => {
+        returnDiv.innerHTML = `<b>CEP:</b> ${getInputCep.value} <p> <b>Erro:</b> ${error}`;
+      });
   });
 }
